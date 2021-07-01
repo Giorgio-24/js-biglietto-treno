@@ -17,9 +17,9 @@ L'output del prezzo finale va stampato in forma umana (con massimo due decimali,
     5 cifra in euro massimo 2 decimali*/
 
     
-    message = 'Il prezzo del tuo biglietto è di: ';
+    message = 'Il prezzo del tuo biglietto è : ';
 
-    var kilometers = parseInt(prompt('Quanti kilometri vorresti percorrere?'));
+    var kilometers = prompt('Quanti kilometri vorresti percorrere?');
     console.log(kilometers)
 
     var userAge = parseInt(prompt('Quanti anni hai?'));
@@ -27,11 +27,20 @@ L'output del prezzo finale va stampato in forma umana (con massimo due decimali,
 
     var ageDiscount = 1;
 
-    if (userAge < 18){
-        ageDiscount = 0.8;
-    } else if (userAge > 65) {
-        ageDiscount = 0.6;
-    }
+    if (kilometers < 0 || userAge < 1){
+        alert("ATTENZIONE!! Hai digitato un valore non valido. Prova a rifare il calcolo inserendo valori positivi.");
+        ageDiscount  = toString('Non valido');
+        var result = document.getElementById('ticket-price')
+        console.log(result)
+        result.innerHTML = message + 'Non valido.';
+    } else{
+
+        if (userAge < 18){
+            ageDiscount = 0.8;
+        } else if (userAge > 65) {
+            ageDiscount = 0.6;
+        }
+    
 
     console.log(ageDiscount)
 
@@ -43,3 +52,4 @@ L'output del prezzo finale va stampato in forma umana (con massimo due decimali,
 
     result.innerHTML = message + ticketPrice.toFixed(2) + '€';
 
+    }
