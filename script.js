@@ -17,3 +17,29 @@ L'output del prezzo finale va stampato in forma umana (con massimo due decimali,
     5 cifra in euro massimo 2 decimali*/
 
     
+    message = 'Il prezzo del tuo biglietto è di: ';
+
+    var kilometers = parseInt(prompt('Quanti kilometri vorresti percorrere?'));
+    console.log(kilometers)
+
+    var userAge = parseInt(prompt('Quanti anni hai?'));
+    console.log(userAge)
+
+    var ageDiscount = 1;
+
+    if (userAge < 18){
+        ageDiscount = 0.8;
+    } else if (userAge > 65) {
+        ageDiscount = 0.6;
+    }
+
+    console.log(ageDiscount)
+
+    var ticketPrice = (kilometers * 0.21) * ageDiscount;
+    console.log(ticketPrice)
+
+    var result = document.getElementById('ticket-price');
+    console.log(result)
+
+    result.innerHTML = message + ticketPrice.toFixed(2) + '€';
+
