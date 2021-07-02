@@ -19,7 +19,7 @@ L'output del prezzo finale va stampato in forma umana (con massimo due decimali,
     
     message = 'Il prezzo del tuo biglietto è : ';
 
-    var kilometers = prompt('Quanti kilometri vorresti percorrere?');
+    var kilometers = parseFloat(prompt('Quanti kilometri vorresti percorrere?'));
     console.log(kilometers)
 
     var userAge = parseInt(prompt('Quanti anni hai?'));
@@ -27,7 +27,7 @@ L'output del prezzo finale va stampato in forma umana (con massimo due decimali,
 
     var ageDiscount = 1;
 
-    if (kilometers < 0 || userAge < 1){
+    if (isNaN(kilometers) || isNaN(userAge) || kilometers < 0 || userAge < 1){
         alert("ATTENZIONE!! Hai digitato un valore non valido. Prova a rifare il calcolo inserendo valori positivi.");
         ageDiscount  = toString('Non valido');
         var result = document.getElementById('ticket-price')
