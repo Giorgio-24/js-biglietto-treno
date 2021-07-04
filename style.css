@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body > div{
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7be995;
+}
+
+.fake-button{
+    text-align: center;
+    padding: 10px 14px;
+    background-color: #fff;
+    font-size: 30px;
+    color: #1d1d1d;
+    max-width: 800px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    margin-top: 20px;
+    text-decoration: none;
+    box-shadow: 15px 10px 4px 5px #000;
+}
